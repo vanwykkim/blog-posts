@@ -4,7 +4,7 @@ const { Comment } = require("../../models");
 //FIXME:
 router.get("/", async (req, res) => {
   try {
-    const commentData = await Comment.get({});
+    const commentData = await Comment.findAll({});
 
     res.status(200).json(commentData);
   } catch (err) {
@@ -15,7 +15,12 @@ router.get("/", async (req, res) => {
 //FIXME:
 router.get("/:id", async (req, res) => {
   try {
-    const commentData = await Comment.get({});
+    const commentData = await Comment.findByPk(req.params.id);
+
+    if (!commentData) {
+      res.status(404).json({ message: "No comment found with that id!" });
+      return;
+    }
 
     res.status(200).json(commentData);
   } catch (err) {
