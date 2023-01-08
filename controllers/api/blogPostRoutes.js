@@ -1,6 +1,31 @@
 const router = require('express').Router();
 const { BlogPost } = require('../../models');
 
+//FIXME:
+router.get('/', async(req, res) => {
+try {
+  const postData = await BlogPost.get({
+   
+  });
+
+  res.status(200).json(postData);
+} catch (err) {
+  res.status(400).json(err);
+}
+
+});
+
+//FIXME: 
+router.get("/:id", async (req, res) => {
+  try {
+    const postData = await BlogPost.get({});
+
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const newPost = await BlogPost.create({
@@ -12,6 +37,11 @@ router.post('/', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
+});
+
+//FIXME:
+router.put('/', async (req, res) => {
+//update the blog post
 });
 
 router.delete('/:id', async (req, res) => {
