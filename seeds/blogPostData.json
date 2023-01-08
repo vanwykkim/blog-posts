@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Why I Like MVC",
+    "post_content": "MVC is set up in a way to keep separate files for the model view and controller that interact together to make a working program."
+  },
+  {
+    "title": "Users used my product",
+    "post_content": "I had users use my product. I'm not sure I like feeling used. Why do we use using and users to describe our client interactions how about explorers instead."
+  },
+  {
+    "title": "Homework does it ever end?",
+    "post_content": "When you do homework, there always seems to be another homework to do after. Is there an end to the dark tunnel called homework? Is it a shiny rainbow called work?"
+  }
+]
