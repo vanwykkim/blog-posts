@@ -19,8 +19,8 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        {{!-- <a href="/homepage">Home</a> |
-        <a href="/dashboard">Dashboard</a> | --}}
+        <a href="/partial/homepage">Home</a> |
+        <a href="partial/dashboard">Dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>

@@ -14,8 +14,8 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/blogpost-details');
+      // If successful, redirect the browser to the homepage page
+      document.location.replace('/partial/homepage');
     } else {
       alert(response.statusText);
     }
