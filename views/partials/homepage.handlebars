@@ -4,23 +4,31 @@
   </div>
 </div>
 
-{{!-- <div>
+<div>
   {{#if blogPosts.length}}
-  <div class="col-md-6 blogPost-list">
-    <h3>Current Posts:</h3>
+  <div class=" blogPost-list">
 
     {{#each blogPosts as |blogPost|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{blogPost.id}}">{{blogPost.title}}</a></h4>
+    <div class="col mb-3">
+      <div class="col">
+        <div>
+        {{!-- FIXME: link to see post with comments format date --}}
+        <h4><a href="/blogpost/{{blogPost.id}}">{{blogPost.title}}</a></h4>
+        </div>
+          <div>
+        <h5>Created by: {{blogPost.user.name}} on {{blogPost.date_created}}</h5>
+        </div>
       </div>
-      <div class="col-md-4">
+      <div class="col">
+        <h6>{{blogPost.post_content}}</h6>
+      </div>
+      {{!-- <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{blogPost.id}}">DELETE</button>
-      </div>
+      </div> --}}
     </div>
     {{/each}}
   </div>
   {{/if}}
-  </div> --}}
+  </div>
 
   <script src="./js/homepage.js"></script>
