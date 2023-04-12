@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Edit Post</h2>
+  </div>
+</div>
+{{!-- FIXME: this should input current post info to input fields then post it to database on update button click --}}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <form class="form new-blogPost-form">
+      <div class="form-group">
+        <label for="blogPost-title">Title:</label>
+        <input class="form-input" type="text" id="blogPost-title" name="blogPost-title" />
+      </div>
+      <div class="form-group">
+        <label for="blogPost-content">Content:</label>
+        <input class="form-input" type="text" id="blogPost-content" name="blogPost-content" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+       <div class="form-group">
+        <button type="delete" class="btn btn-primary">Delete</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+
+<script src="./js/blogPostUpdate.js"></script>

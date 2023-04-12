@@ -2,6 +2,11 @@ const router = require('express').Router();
 const { BlogPost } = require('../../models');
 const withAuth = require("../../utils/auth");
 
+
+//need get, put, delete, get one and get all??
+
+//get all posts (with comments and display comments on click?)
+
 //FIXME:
 router.get('/', async(req, res) => {
 try {
@@ -15,7 +20,7 @@ try {
 }
 
 });
-//FIXME: 
+//FIXME:  get one for update show etc
 router.get("/:id", async (req, res) => {
   try {
     const postData = await BlogPost.findByPk(req.params.id, {
@@ -31,7 +36,7 @@ router.get("/:id", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+//FIXME:create new post
 router.post('/', async (req, res) => {
   try {
     const newPost = await BlogPost.create({
@@ -67,6 +72,8 @@ try {
 }
 });
 
+
+//FIXME: check that delete works
 router.delete('/:id', async (req, res) => {
   try {
     const postData = await BlogPost.destroy({

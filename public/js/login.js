@@ -37,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/blogpost');
+      document.location.replace('./partials/dashboard');
     } else {
       alert(response.statusText);
     }

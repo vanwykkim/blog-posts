@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Posts</title>
-//  <link rel="stylesheet" href="/css/jass.css">
+  <title>Tech Blog</title>
+ <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -13,17 +13,17 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
+        {{!-- <span role="img" aria-label="money">💸</span> --}}
         <a href="/">The Tech Blog</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/partial/homepage">Home</a> |
-        <a href="partial/dashboard">Dashboard</a> |
+        <a href="/homepage">Home</a> |
+        <a href="/dashboard">Dashboard</a> |
         <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
+        {{!-- {{else}}
+        <a href="/login">login</a> --}}
         {{/if}}
       </nav>
     </header>
@@ -31,9 +31,9 @@
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
+    {{!-- <footer>
       <p>Created By: Kim Van Wyk</p>
-    </footer>
+    </footer> --}}
   </div>
 
   <!-- Render script for logged in users only -->
